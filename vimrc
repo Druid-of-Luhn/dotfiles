@@ -118,4 +118,5 @@ nnoremap <Leader>[ :bprev<CR>
 
 " Dispatch
 autocmd FileType java let b:dispatch="javac -d bin src/**/*.java"
-nnoremap <Leader>r :Dispatch<CR>
+nnoremap <Leader>r :Make<CR>
+nnoremap <Leader>b :Dispatch<CR>
