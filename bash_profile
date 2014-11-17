@@ -43,7 +43,7 @@ export IRCHOST="druidofluhn"
 export IRCNAME="Druid of Luhn"
 export IRCSERVER="chat.freenode.net"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Haskell
 export PATH=~/Library/Haskell/bin:$PATH
