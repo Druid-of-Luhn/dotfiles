@@ -4,6 +4,7 @@ alias wumpus="cd ~/Documents/University/CS1006/01-Wumpus/Code && java Main"
 alias get-wumpus="python ~/Developer/Python/Wumpus/wumpus.py"
 alias dice="python ~/Developer/Python/Dice.py"
 alias rename="python ~/Developer/Python/batch_rename.py"
+alias torrent="transmission-cli -D -B -er -w ./"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
