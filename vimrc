@@ -23,10 +23,13 @@ set copyindent          " Copy indentation from previous line
 set pastetoggle=<F2>    " Stop vim from badly indenting pasted data
 
 set showmatch           " Show matching brackets, etc
+
+" Search
 set hlsearch            " Highlight search terms
 set incsearch           " Highlight dynamically as pattern is typed
 set smartcase           " If search is lower case, ignore case
 
+" Shell
 set shell=bash
 set title               " Set title of terminal window
 set noerrorbells        " Don't beep
@@ -51,8 +54,10 @@ nnoremap Y y$
 " Map auto-completion to ,-tab
 imap <Leader><tab> <C-x><C-o>
 " Map next/previous error message to ,-n/,-m
-map <Leader>n :lnext<CR>
-map <Leader>m :lprev<CR>
+nnoremap <Leader>n :lnext<CR>
+nnoremap <Leader>m :lprev<CR>
+" Easy way to remove highlight from search
+nnoremap <Leader><Leader> :noh<CR>
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
