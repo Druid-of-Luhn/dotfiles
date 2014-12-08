@@ -6,6 +6,7 @@ alias dice="python ~/Developer/Python/Dice.py"
 alias rename="python ~/Developer/Python/batch_rename.py"
 alias torrent="transmission-cli -D -B -er -w ./"
 alias ffbookmarks="~/Developer/Shell/ffbookmarks"
+alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
