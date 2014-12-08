@@ -5,6 +5,7 @@ alias get-wumpus="python ~/Developer/Python/Wumpus/wumpus.py"
 alias dice="python ~/Developer/Python/Dice.py"
 alias rename="python ~/Developer/Python/batch_rename.py"
 alias torrent="transmission-cli -D -B -er -w ./"
+alias ffbookmarks="~/Developer/Shell/ffbookmarks"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
