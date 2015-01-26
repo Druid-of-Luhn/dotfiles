@@ -1,41 +1,41 @@
 execute pathogen#infect()
 
-set nocompatible        " Use Vim defaults instead of 100% vi compatibility
-set hidden              " Allow hiding unsaved buffers
-set history=100         " Keep 100 lines of history
-set laststatus=2        " Always display status line
-set ruler               " Show the cursor position
-set number              " Line numbers in gutter on left
+set nocompatible		" Use Vim defaults instead of 100% vi compatibility
+set hidden				" Allow hiding unsaved buffers
+set history=100			" Keep 100 lines of history
+set laststatus=2		" Always display status line
+set ruler				" Show the cursor position
+set number				" Line numbers in gutter on left
 
-let mapleader=" "       " Use big spacebar as leader
+let mapleader=" "		" Use big spacebar as leader
 
-syntax on               " Syntax highlighting
+syntax on				" Syntax highlighting
 filetype plugin indent on
 
 " Indentation
-set tabstop=4           " 4 spaces wide
-set shiftwidth=4        " 4 spaces wide using < and >
-set softtabstop=4       " 4 spaces wide when writing
-set smarttab            " tabs are consistent
-set expandtab           " use spaces for tabs
+set tabstop=4			" 4 spaces wide
+set shiftwidth=4		" 4 spaces wide using < and >
+set softtabstop=4		" 4 spaces wide when writing
+set smarttab			" tabs are consistent
+set noexpandtab			" use real tabs
 set autoindent
-set copyindent          " Copy indentation from previous line
-set pastetoggle=<F2>    " Stop vim from badly indenting pasted data
+set copyindent			" Copy indentation from previous line
+set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
 
-set showmatch           " Show matching brackets, etc
+set showmatch			" Show matching brackets, etc
 
 " Search
-set hlsearch            " Highlight search terms
-set incsearch           " Highlight dynamically as pattern is typed
-set smartcase           " If search is lower case, ignore case
+set hlsearch			" Highlight search terms
+set incsearch			" Highlight dynamically as pattern is typed
+set smartcase			" If search is lower case, ignore case
 
 " Shell
 set shell=bash
-set title               " Set title of terminal window
-set noerrorbells        " Don't beep
-set wildmenu            " Make tab completion for files work like bash
-set autoread            " Automatically reload files changed outside of vim
-set ttyfast             " Optimize for fast terminal connections
+set title				" Set title of terminal window
+set noerrorbells		" Don't beep
+set wildmenu			" Make tab completion for files work like bash
+set autoread			" Automatically reload files changed outside of vim
+set ttyfast				" Optimize for fast terminal connections
 setlocal spell spelllang=en_gb
 
 " Vim ignores these files
@@ -92,7 +92,7 @@ let g:vim_markdown_folding_disabled=1
 let g:syntastic_javascript_checkers=["jshint"]
 let g:syntastic_java_checkers=["javac"]
 let g:syntastic_check_on_open=1
-let g:syntastic_always_populate_loc_list=1    " Add errors to error list
+let g:syntastic_always_populate_loc_list=1	  " Add errors to error list
 
 " Change Haskell indentation defaults
 let g:haskell_indent_if=2
@@ -104,9 +104,9 @@ let g:ctrlp_map="<C-p>"
 let g:ctrlp_cmd="CtrlP"
 let g:ctrlp_working_path_mode="ra"
 let g:ctrlp_custom_ignore={
-    \ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
-    \ "file": "\v*\.(DS_STORE|aux|class|out|pyc$",
-    \ }
+	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
+	\ "file": "\v*\.(DS_STORE|aux|class|out|pyc$",
+	\ }
 let g:ctrlp_user_command=['.git', 'cd %s && git ls-files']
 let g:ctrlp_show_hidden=1
 
