@@ -36,7 +36,9 @@ set noerrorbells		" Don't beep
 set wildmenu			" Make tab completion for files work like bash
 set autoread			" Automatically reload files changed outside of vim
 set ttyfast				" Optimize for fast terminal connections
-setlocal spell spelllang=en_gb
+
+" Spelling is only checked in markdown and text files (.vim/after/ftplugin)
+" setlocal spell spelllang=en_gb
 
 " Vim ignores these files
 set wildignore=*.swp,*.bak,*.pyc,*.class
