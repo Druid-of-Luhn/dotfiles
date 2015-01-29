@@ -17,7 +17,7 @@ set tabstop=4			" 4 spaces wide
 set shiftwidth=4		" 4 spaces wide using < and >
 set softtabstop=4		" 4 spaces wide when writing
 set smarttab			" tabs are consistent
-set noexpandtab			" use real tabs
+set expandtab			" use spaces for tabs
 set autoindent
 set copyindent			" Copy indentation from previous line
 set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
