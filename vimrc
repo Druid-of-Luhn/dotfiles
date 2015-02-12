@@ -141,7 +141,7 @@ let g:tmuxline_preset = {
 let g:lightline = {
     \ "active": {
         \ "left": [ ["mode", "paste"], ["fugitive", "filename", "modified"], ["ctrlpmark"] ],
-        \ "right": [ ["lineinfo"], ["percent"], ["fileformat", "fileencoding", "filetype"] ]
+        \ "right": [ ["lineinfo"], ["percent"], ["filetype"] ]
     \ },
     \ "component_function": {
         \ "fugitive": "MyFugitive",
