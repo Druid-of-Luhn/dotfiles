@@ -32,7 +32,7 @@ set smartcase			" If search is lower case, ignore case
 " Shell
 set shell=bash
 set title				" Set title of terminal window
-set noerrorbells		" Don't beep
+set noerrorbells		" Don"t beep
 set wildmenu			" Make tab completion for files work like bash
 set autoread			" Automatically reload files changed outside of vim
 set ttyfast				" Optimize for fast terminal connections
@@ -66,7 +66,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Don't make backups
+" Don"t make backups
 set nobackup
 set nowritebackup
 
@@ -109,7 +109,7 @@ let g:ctrlp_custom_ignore={
 	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
 	\ "file": "\v*\.(DS_STORE|aux|class|out|pyc$",
 	\ }
-let g:ctrlp_user_command=['.git', 'cd %s && git ls-files']
+let g:ctrlp_user_command=[".git", "cd %s && git ls-files"]
 let g:ctrlp_show_hidden=1
 
 " UltiSnips
@@ -128,5 +128,62 @@ autocmd FileType java let b:dispatch="javac -d bin src/**/*.java"
 nnoremap <Leader>r :Make<CR>
 nnoremap <Leader>b :Dispatch<CR>
 
-" Airline
-let g:airline_powerline_fonts = 1
+" Lightline
+let g:lightline = {
+    \ "active": {
+        \ "left": [ ["mode", "paste"], ["fugitive", "filename", "modified"], ["ctrlpmark"] ],
+        \ "right": [ ["lineinfo"], ["percent"], ["fileformat", "fileencoding", "filetype"] ]
+    \ },
+    \ "component_function": {
+        \ "fugitive": "MyFugitive",
+        \ "ctrlpmark": "CtrlPMark"
+    \ },
+	\ "separator": { "left": "\ue0b0", "right": "\ue0b2" },
+	\ "subseparator": { "left": "\ue0b1", "right": "\ue0b3" }
+	\ }
+
+function! MyFugitive()
+    try
+        if expand("%:t") !~? "Tagbar\|Gundo\|NERD" && &ft !~? "vimfiler" && exists("*fugitive#head")
+            let mark = ""  " edit here for cool mark
+            let _ = fugitive#head()
+            return strlen(_) ? mark._ : ""
+        endif
+    catch
+    endtry
+    return ""
+endfunction
+
+function! CtrlPMark()
+    if expand("%:t") =~ "ControlP"
+        call lightline#link("iR"[g:lightline.ctrlp_regex])
+        return lightline#concatenate([g:lightline.ctrlp_prev, g:lightline.ctrlp_item
+                    \ , g:lightline.ctrlp_next], 0)
+    else
+        return ""
+    endif
+endfunction
+
+let g:ctrlp_status_func = {
+    \ "main": "CtrlPStatusFunc_1",
+    \ "prog": "CtrlPStatusFunc_2",
+    \ }
+
+function! CtrlPStatusFunc_1(focus, byfname, regex, prev, item, next, marked)
+    let g:lightline.ctrlp_regex = a:regex
+    let g:lightline.ctrlp_prev = a:prev
+    let g:lightline.ctrlp_item = a:item
+    let g:lightline.ctrlp_next = a:next
+    return lightline#statusline(0)
+endfunction
+
+function! CtrlPStatusFunc_2(str)
+    return lightline#statusline(0)
+endfunction
+
+let g:tagbar_status_func = "TagbarStatusFunc"
+
+function! TagbarStatusFunc(current, sort, fname, ...) abort
+    let g:lightline.fname = a:fname
+    return lightline#statusline(0)
+endfunction
