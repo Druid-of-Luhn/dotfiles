@@ -127,3 +127,6 @@ nnoremap <Leader>[ :bprev<CR>
 autocmd FileType java let b:dispatch="javac -d bin src/**/*.java"
 nnoremap <Leader>r :Make<CR>
 nnoremap <Leader>b :Dispatch<CR>
+
+" Airline
+let g:airline_powerline_fonts = 1
