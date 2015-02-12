@@ -128,6 +128,15 @@ autocmd FileType java let b:dispatch="javac -d bin src/**/*.java"
 nnoremap <Leader>r :Make<CR>
 nnoremap <Leader>b :Dispatch<CR>
 
+" Tmuxline
+let g:tmuxline_preset = {
+    \ "a": "#H",
+    \ "b": "#S",
+    \ "win":  "#I:#W",
+    \ "cwin": "#I:#W",
+    \ "z": ["%R", "%Y-%m-%d"]
+    \ }
+
 " Lightline
 let g:lightline = {
     \ "active": {
