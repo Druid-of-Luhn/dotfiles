@@ -69,6 +69,8 @@ nnoremap <c-l> <c-w>l
 nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 " Reload vimrc
 nnoremap <leader>rv :source ~/.vimrc<cr>
+" Undotree
+nnoremap <F5> :UndotreeToggle<cr>
 
 " Don"t make backups
 set nobackup
