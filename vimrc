@@ -109,7 +109,7 @@ let g:ctrlp_custom_ignore={
 	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
 	\ "file": "\v*\.(DS_STORE|aux|class|out|pyc$",
 	\ }
-let g:ctrlp_user_command=[".git", "cd %s && git ls-files"]
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_show_hidden=1
 
 " UltiSnips
