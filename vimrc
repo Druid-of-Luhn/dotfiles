@@ -65,6 +65,10 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+" Edit vimrc
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+" Reload vimrc
+nnoremap <leader>rv :source ~/.vimrc<cr>
 
 " Don"t make backups
 set nobackup
