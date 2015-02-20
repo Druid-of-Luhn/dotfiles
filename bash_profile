@@ -27,6 +27,8 @@ export PS1="$CYAN\u$END@\h:$GREEN\W$END\$(prompt_git \" ${PURPLE}\")$END $ "
 
 export EDITOR="vim"
 
+export TERM=xterm-256color
+
 # Java
 export CLASSPATH=".:bin:lib:src"
 export JLIBS_HOME="/usr/share/java"
