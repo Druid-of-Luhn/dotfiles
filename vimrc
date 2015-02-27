@@ -9,7 +9,12 @@ set number				" Line numbers in gutter on left
 
 let mapleader=" "		" Use big spacebar as leader
 
-syntax on				" Syntax highlighting
+syntax enable		    " Syntax highlighting
+if has("gui_running")
+    set background=dark
+    colorscheme solarized
+    set guifont=Inconsolata\ for\ Powerline\ Medium\ 12
+endif
 filetype plugin indent on
 
 " Indentation
