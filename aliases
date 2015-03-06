@@ -13,7 +13,7 @@ alias cs2006="cd ~/Documents/University/CS2006/Lectures && wget -rqN -A pdf -np 
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
-alias ls="ls -G"
+alias ls="ls -G --color=auto"
 alias grep="grep --color"
 
 # Get week number
