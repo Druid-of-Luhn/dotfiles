@@ -106,6 +106,7 @@ let g:syntastic_javascript_checkers=["jshint"]
 let g:syntastic_java_checkers=["javac"]
 let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list=1	  " Add errors to error list
+let g:syntastic_disabled_filetypes=["asm"]      " Disable checking of assembly files
 
 " Change Haskell indentation defaults
 let g:haskell_indent_if=2
