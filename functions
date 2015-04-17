@@ -20,7 +20,7 @@ function targz() {
 		fi;
 	fi;
 
-	echo "Compressing .tar using \`${cmd}\`…";
+	echo "Compressing .tar using \`${cmd}\`Ã¢ÂÂ¦";
 	"${cmd}" -v "${tmpFile}" || return 1;
 	[ -f "${tmpFile}" ] && rm "${tmpFile}";
 	echo "${tmpFile}.gz created successfully.";
@@ -37,8 +37,13 @@ function json() {
 }
 
 function update_git() {
+    if [[ $# < 1 ]]; then
+        directory=~
+    else
+        directory=$1
+    fi
     DIR=$(pwd)
-    for REPO in $(find ~ -name .git); do
+    for REPO in $(find $directory -name .git); do
         cd $REPO/..
         pwd
         git pull
