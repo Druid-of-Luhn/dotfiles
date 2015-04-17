@@ -22,3 +22,7 @@
 [help]
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
