@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/billy/Documents/University/CS2003/Tutorials/W05-solutions'
-let g:netrw_dirhist_2='/Users/billy/Documents/University/CS2001/Practicals/P08/src'
-let g:netrw_dirhist_3='/Users/billy/Documents/University/CS2001/Practicals/P06'
