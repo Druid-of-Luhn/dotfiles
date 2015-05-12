@@ -88,12 +88,13 @@ set path+=/usr/local/Cellar/sdl2/2.0.3/include
 call plug#begin('~/.nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'edkolev/tmuxline.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
+Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive', { 'on': ['Gblame', 'Gcommit', 'Gdiff', 'Git', 'Gstatus'] }
 call plug#end()
