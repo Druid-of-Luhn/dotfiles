@@ -4,6 +4,12 @@ for file in ~/Developer/dotfiles/aliases ~/Developer/dotfiles/functions ~/Develo
     fi
 done
 
+# Check CESAM Nature availabilities
+# --------------------------------
+cd ~/Documents/Work/CESAM
+./stcheck.sh
+cd -
+
 # Colours
 BLACK="\[\e[0;30m\]"
 RED="\[\e[0;31m\]"
@@ -51,6 +57,9 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Haskell
 export PATH=~/Library/Haskell/bin:$PATH
+
+# SDL
+export PATH=/usr/local/Cellar/sdl2/2.0.3:$PATH
 
 # UTF-8 Locale
 export LC_ALL=en_GB.UTF-8
