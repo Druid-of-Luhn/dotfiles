@@ -24,6 +24,7 @@ set smarttab			" tabs are consistent
 set expandtab			" use spaces for tabs
 set autoindent
 set copyindent			" Copy indentation from previous line
+set linebreak           " Break lines in sensible places
 set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
 
 " Search
