@@ -76,6 +76,9 @@ set nowritebackup
 set autoread
 " Understand mac file formats
 set fileformats+=mac
+" Open file browser in tree mode
+let g:netrw_liststyle=3
+nnoremap <leader>\ :Vex<CR>
 
 " Add include locations
 set path+=/usr/local/Cellar/sdl2/2.0.3/include
@@ -97,7 +100,6 @@ Plug 'tpope/vim-surround'
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 
 " Ctrl-P
@@ -114,6 +116,3 @@ let g:ctrlp_custom_ignore={
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions = ["buffertag", "line"]
-
-" NERDTree
-nnoremap <leader>\ :NERDTreeToggle<CR>
