@@ -1,9 +1,9 @@
+let mapleader=" "	    " Use spacebar as leader
+
 set hidden			    " Allow hiding unsaved buffers
 set history=100		    " Keep 100 lines of history
 set ruler			    " Show the cursor position
 set number			    " Line numbers in gutter on left
-
-let mapleader=" "	    " Use spacebar as leader
 
 syntax enable		    " Syntax highlighting
 filetype plugin indent on
@@ -14,6 +14,8 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
+set showmatch			" Show matching brackets, etc
+
 " Indentation
 set tabstop=4			" 4 spaces wide
 set shiftwidth=4		" 4 spaces wide using < and >
@@ -23,8 +25,6 @@ set expandtab			" use spaces for tabs
 set autoindent
 set copyindent			" Copy indentation from previous line
 set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
-
-set showmatch			" Show matching brackets, etc
 
 " Search
 set hlsearch			" Highlight search terms
@@ -92,7 +92,6 @@ call plug#begin('~/.nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -100,6 +99,7 @@ Plug 'tpope/vim-surround'
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
 call plug#end()
 
 " Ctrl-P
@@ -116,3 +116,8 @@ let g:ctrlp_custom_ignore={
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions = ["buffertag", "line"]
+
+" Syntastic
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_wq=0
