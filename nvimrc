@@ -41,7 +41,7 @@ set wildmenu			" Make tab completion for files work like bash
 set ttyfast			    " Optimize for fast terminal connections
 
 " Vim ignores these files
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=tags,*.swp,*.swo,*.bak,*.pyc,*.class
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
