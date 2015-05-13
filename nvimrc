@@ -29,6 +29,7 @@ set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
 " Search
 set hlsearch			" Highlight search terms
 set incsearch			" Highlight dynamically as pattern is typed
+set ignorecase          " Ignore searchcase
 set smartcase			" If search is lower case, ignore case
 
 " Shell
