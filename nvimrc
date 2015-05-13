@@ -103,6 +103,8 @@ call plug#end()
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map="<C-p>"
 let g:ctrlp_cmd="CtrlP"
+nnoremap <leader>t :CtrlPBufTag<CR>
+nnoremap <leader>f :CtrlPLine<CR>
 let g:ctrlp_working_path_mode="ra"
 let g:ctrlp_custom_ignore={
 	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
