@@ -32,7 +32,7 @@ alias junit="java -cp .:$JLIBS_HOME/junit-4.11.jar:$JLIBS_HOME/hamcrest-core-1.3
 export PATH=~/Library/Haskell/bin:$PATH
 
 # rbenv
-eval "$(rbenv init -)"
+[ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(~/.rbenv/bin/rbenv init -)"
 
 # BitchX
 alias BitchX="BitchX -A"
