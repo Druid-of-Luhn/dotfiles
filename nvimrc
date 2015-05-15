@@ -6,7 +6,8 @@ set ruler			    " Show the cursor position
 set number			    " Line numbers in gutter on left
 
 syntax enable		    " Syntax highlighting
-color slate
+set background=dark     " Use dark background
+colorscheme dark        " Use 'dark' colourscheme
 
 filetype plugin indent on
 " Enable file type detection
