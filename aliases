@@ -1,18 +1,8 @@
+# Start an HTTP in the current directory
 alias phps="php -S localhost:8888"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
-
-# Set ls highlighting, depending on system
-ENV=`uname -s`
-if [[ $ENV == "Darwin" ]]; then
-    alias ls="ls -G"
-fi
-if [[ $ENV == "Linux" ]]; then
-    alias ls="ls --color=auto"
-fi
-# Colour grep output
-alias grep="grep --color"
 
 # Get week number
 alias week='date +%V'

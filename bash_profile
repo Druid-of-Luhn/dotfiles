@@ -13,6 +13,10 @@ export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR="nvim"
 # Using coloured xterm terminal
 export TERM=xterm-256color
+# Colour ls output
+export CLICOLOR=1
+# Colour grep output
+export GREP_OPTIONS="--color=auto"
 
 # UTF-8 Locale
 export LC_ALL=en_GB.UTF-8
