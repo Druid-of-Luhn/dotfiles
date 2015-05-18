@@ -37,3 +37,9 @@ export PATH=~/Library/Haskell/bin:$PATH
 
 # rbenv
 [ ! -f "$HOME/.rbenv/bin/rbenv" ] || eval "$(~/.rbenv/bin/rbenv init -)"
+
+# IRC
+export IRCNICK="DruidofLuhn"
+export IRCUSER="druid"
+export IRCHOST="druidofluhn"
+export IRCNAME="Druid of Luhn"
