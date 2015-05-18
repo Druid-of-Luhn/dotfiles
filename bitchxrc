@@ -1,7 +1,0 @@
-set auto_away off
-
-on connect "*freenode*" {
-    msg NickServ IDENTIFY Crypt?Of?The?7?Hells
-}
-
-alias id /msg NickServ IDENTIFY Crypt?Of?The?7?Hells
