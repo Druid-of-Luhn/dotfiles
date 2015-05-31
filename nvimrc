@@ -104,7 +104,7 @@ Plug 'tpope/vim-surround'
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' }
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': 'java' }
 call plug#end()
 
 " Ctrl-P
