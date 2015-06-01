@@ -12,10 +12,6 @@ colorscheme dark        " Use 'dark' colourscheme
 filetype plugin indent on
 " Enable file type detection
 filetype on
-" Treat .json files as .js
-autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-" Treat .md files as Markdown
-autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
 set showmatch			" Show matching brackets, etc
 
@@ -29,6 +25,18 @@ set autoindent
 set copyindent			" Copy indentation from previous line
 set linebreak           " Break lines in sensible places
 set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
+
+" File-specific options
+" Set C indentation for C and C++ files
+autocmd BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp setlocal cindent
+" Set spelling for text files
+autocmd BufNewFile,BufRead *.txt,*.tex,*.md setlocal spell spelllang=en_gb
+" Set indentation to tabs for Makefiles
+autocmd BufNewFile,BufRead Makefile setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+" Treat .json files as .js
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+" Treat .md files as Markdown
+autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
 " Search
 set hlsearch			" Highlight search terms
