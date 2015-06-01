@@ -65,7 +65,7 @@ nnoremap k gk
 " Y yanks to end of line
 nnoremap Y y$
 " Map auto-completion to " "-tab
-imap <Leader><tab> <C-x><C-o>
+imap <Leader><tab> <C-n>
 " Easy way to remove highlight from search
 nnoremap <Leader><Leader> :noh<CR>
 " Move around splits with <c-hjkl>
@@ -73,13 +73,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-" And same for terminal
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-l> <C-\><C-n><C-w>l
-" Use Esc to exit Terminal mode
-tnoremap <Esc> <C-\><C-n>
+" Only applied to neovim
+if has("nvim")
+    " And same for terminal
+    tnoremap <C-j> <C-\><C-n><C-w>j
+    tnoremap <C-k> <C-\><C-n><C-w>k
+    tnoremap <C-h> <C-\><C-n><C-w>h
+    tnoremap <C-l> <C-\><C-n><C-w>l
+    " Use Esc to exit Terminal mode
+    tnoremap <Esc> <C-\><C-n>
+endif
 
 " Don't make backups
 set nobackup
