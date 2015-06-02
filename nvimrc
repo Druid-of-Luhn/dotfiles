@@ -26,6 +26,7 @@ set expandtab			" use spaces for tabs
 set autoindent
 set copyindent			" Copy indentation from previous line
 set linebreak           " Break lines in sensible places
+set pastetoggle=<F2>    " Easily toggle paste mode
 
 " File-specific options
 " Set C indentation for C and C++ files
