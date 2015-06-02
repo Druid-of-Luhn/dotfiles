@@ -12,11 +12,11 @@ hi CursorColumn gui=NONE guifg=NONE guibg=#1a1a1a ctermbg=Black
 hi CursorLine gui=NONE guifg=NONE guibg=#242428 ctermbg=DarkGrey
 hi DiffAdd gui=NONE guifg=NONE guibg=#2f6f2f ctermbg=LightGreen
 hi DiffChange gui=NONE guifg=NONE guibg=#1a1a1a ctermbg=Yellow
-hi DiffDelete gui=NONE guifg=NONE guibg=#6f2f2f ctermbg=DarkRed
+hi DiffDelete gui=NONE guifg=NONE guibg=#6f2f2f ctermfg=Black ctermbg=DarkRed
 hi DiffText gui=NONE guifg=NONE guibg=#6f6f2f ctermbg=Brown
 hi Directory gui=NONE guifg=#7f7f90 guibg=NONE ctermfg=Grey
-hi Error gui=NONE guifg=NONE guibg=#260808 ctermbg=DarkRed
-hi ErrorMsg gui=NONE guifg=NONE guibg=#6f2f2f ctermbg=LightRed
+hi Error gui=NONE guifg=NONE guibg=#260808 ctermfg=Black ctermbg=DarkRed
+hi ErrorMsg gui=NONE guifg=NONE guibg=#6f2f2f ctermfg=Black ctermbg=DarkRed
 hi FoldColumn gui=NONE guifg=#7f7f90 guibg=NONE
 hi Folded gui=NONE guifg=#7f7f90 guibg=NONE
 hi Ignore gui=NONE guifg=NONE guibg=NONE
@@ -56,7 +56,7 @@ hi Underlined gui=NONE guifg=NONE guibg=NONE
 hi VertSplit gui=NONE guifg=#45454a guibg=NONE ctermfg=DarkGrey ctermbg=DarkGrey
 hi Visual gui=NONE guifg=NONE guibg=#40404f ctermbg=DarkGrey
 hi VisualNOS gui=NONE guifg=NONE guibg=NONE
-hi WarningMsg gui=NONE guifg=NONE guibg=#6f6f2f ctermbg=Red
+hi WarningMsg gui=NONE guifg=NONE guibg=#6f6f2f ctermfg=Black ctermbg=Red
 hi WildMenu gui=NONE guifg=#1e1e2e guibg=#ffe366 ctermfg=Black ctermbg=Yellow
 hi lCursor gui=NONE guifg=NONE guibg=NONE
 hi Identifier gui=NONE guifg=NONE guibg=NONE ctermfg=DarkBlue
