@@ -59,6 +59,8 @@ set backspace=indent,eol,start
 " Mapping
 " Forgot to sudo vim
 cmap w!! w !sudo tee % >/dev/null
+" Stop q: window from popping up
+map q: :q
 " Allow navigating wrapped line
 nnoremap j gj
 nnoremap k gk
