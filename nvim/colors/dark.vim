@@ -37,10 +37,10 @@ hi Search gui=NONE guifg=NONE guibg=#262626 ctermfg=Black ctermbg=Yellow
 hi SignColumn gui=NONE guifg=#7faf60 guibg=NONE ctermfg=LightGreen
 hi Special gui=NONE guifg=#8accff guibg=NONE ctermfg=Magenta
 hi SpecialKey gui=NONE guifg=#616161 guibg=NONE ctermfg=Grey
-hi SpellBad gui=undercurl guisp=NONE guifg=NONE guibg=NONE cterm=undercurl
-hi SpellCap gui=undercurl guisp=NONE guifg=NONE guibg=NONE cterm=undercurl
-hi SpellLocal gui=undercurl guisp=NONE guifg=NONE guibg=NONE cterm=undercurl
-hi SpellRare gui=undercurl guisp=NONE guifg=NONE guibg=#262626 cterm=undercurl
+hi SpellBad gui=undercurl guisp=NONE guifg=NONE guibg=NONE ctermfg=Black
+hi SpellCap gui=undercurl guisp=NONE guifg=NONE guibg=NONE ctermfg=Black
+hi SpellLocal gui=undercurl guisp=NONE guifg=NONE guibg=NONE ctermfg=Black
+hi SpellRare gui=undercurl guisp=NONE guifg=NONE guibg=#262626 ctermfg=Black
 hi Statement gui=NONE guifg=#8accff guibg=NONE ctermfg=Yellow
 hi StatusLine gui=NONE guifg=#7f7f90 guibg=#1a1a1f ctermfg=Grey ctermbg=Black
 hi StatusLineNC gui=NONE guifg=#7f7f90 guibg=#242428 ctermfg=DarkGrey ctermbg=Black

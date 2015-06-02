@@ -12,6 +12,8 @@ colorscheme dark        " Use 'dark' colourscheme
 filetype plugin indent on
 " Enable file type detection
 filetype on
+" Spell check all files (applies only to comments in code)
+set spell spelllang=en_gb
 
 set showmatch			" Show matching brackets, etc
 
@@ -29,8 +31,6 @@ set pastetoggle=<F2>	" Stop vim from badly indenting pasted data
 " File-specific options
 " Set C indentation for C and C++ files
 autocmd BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp setlocal cindent
-" Set spelling for text files
-autocmd BufNewFile,BufRead *.txt,*.tex,*.md setlocal spell spelllang=en_gb
 " Set indentation to tabs for Makefiles
 autocmd BufNewFile,BufRead Makefile setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 " Treat .json files as .js
