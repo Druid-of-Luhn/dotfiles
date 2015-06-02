@@ -68,6 +68,9 @@ nnoremap Y y$
 imap <Leader><tab> <C-n>
 " Easy way to remove highlight from search
 nnoremap <Leader><Leader> :noh<CR>
+" Jump to end of pasted text
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 " Move around splits with <c-hjkl>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
