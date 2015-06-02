@@ -134,7 +134,12 @@ let g:ctrlp_custom_ignore={
 	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
 	\ "file": "\v*\.(DS_STORE|aux|class|log|out|pyc)$",
 	\ }
-let g:ctrlp_user_command = [".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
+if executable("ag")
+    set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+    let g:ctrlp_user_command = [".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
+endif
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions = ["buffertag", "line"]
 
