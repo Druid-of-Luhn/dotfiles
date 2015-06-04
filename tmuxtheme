@@ -1,6 +1,5 @@
-# This tmux statusbar config was created by tmuxline.vim
-# on Thu, 12 Feb 2015
-
+# TMUX Theme
+#
 set -g status-bg "colour236"
 set -g message-command-fg "colour231"
 set -g status-justify "centre"
