@@ -8,7 +8,7 @@ done
 # Export coloured prompt
 export PS1="$CYAN\u$END@\h:$GREEN\W$END\$(prompt_git \" ${PURPLE}\")$END $ "
 # Export path
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/.bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 # Set editor to nvim
 export EDITOR="nvim"
 # Using coloured xterm terminal
