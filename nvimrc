@@ -136,15 +136,16 @@ let g:ctrlp_custom_ignore={
 	\ }
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 else
-    let g:ctrlp_user_command = [".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
+    let g:ctrlp_user_command=[".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
 endif
 let g:ctrlp_show_hidden=1
-let g:ctrlp_extensions = ["buffertag", "line"]
+let g:ctrlp_extensions=["buffertag", "line"]
 
 " Syntastic
 nnoremap <leader>l :SyntasticCheck<CR>
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
+let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
