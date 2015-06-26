@@ -24,6 +24,8 @@ export LANG=en_GB.UTF-8
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+# Allow extended globbing
+shopt -s extglob
 
 # Java
 export CLASSPATH=".:bin:lib:src"
