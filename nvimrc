@@ -153,4 +153,4 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
 
 " Rainbow Parentheses
-autocmd BufNewFile,BufRead *.scm,*.lisp RainbowParenthesesToggle RainbowParenthesesLoadSquare RainbowParenthesesLoadRound
+autocmd BufNewFile,BufRead *.scm,*.lisp RainbowParenthesesToggle
