@@ -112,7 +112,7 @@ set path+=/usr/local/Cellar/sdl2/2.0.3/include
 call plug#begin('~/.nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
