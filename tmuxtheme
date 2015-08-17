@@ -1,34 +1,58 @@
+# #!/bin/bash
+#
 # TMUX Theme
 #
-# colour3   : yellow
-# colour240 : dark grey
-# colour252 : light grey
+# Colours
+tm_yellow="colour3"
+tm_black="colour0"
+tm_grey="colour252"
+tm_fyellow_bblack="#[fg=$yellow,bg=$tm_black]"
+tm_fblack_byellow="#[fg=$tm_black,bg=$tm_yellow]"
+tm_fgrey_bblack="#[fg=$tm_grey,bg=$tm_black]"
+tm_fblack_bgrey="#[fg=$tm_black,bg=$tm_grey]"
 
-set -g status-bg "colour240"
-set -g message-command-fg "colour252"
-set -g status-justify "centre"
-set -g status-left-length "100"
+# Pane border colours
+set -g pane-active-border-fg $tm_yellow
+set -g pane-active-border-bg $tm_yellow
+set -g pane-border-fg $tm_black
+set -g pane-border-bg $tm_black
+# Pane number display
+set -g display-panes-active-colour $tm_yellow
+set -g display-panes-colour $tm_grey
+
+# Messages
+set -g message-fg $tm_grey
+set -g message-bg $tm_black
+set -g message-command-fg $tm_grey
+set -g message-command-bg $tm_black
+
+# Status line
 set -g status "on"
-set -g pane-active-border-fg "colour3"
-set -g pane-active-border-bg "colour3"
-set -g pane-border-fg "colour240"
-set -g pane-border-bg "colour240"
-set -g message-bg "colour240"
-set -g status-right-length "100"
-set -g status-right-attr "none"
-set -g message-fg "colour252"
-set -g message-command-bg "colour240"
-set -g status-attr "none"
+set -g status-fg $tm_grey
+set -g status-bg $tm_black
+set -g status-justify "centre"
 set -g status-utf8 "on"
-set -g status-left-attr "none"
-setw -g window-status-fg "colour240"
-setw -g window-status-attr "none"
-setw -g window-status-activity-bg "colour240"
-setw -g window-status-activity-attr "none"
-setw -g window-status-activity-fg "colour240"
+set -g status-left-length "100"
+set -g status-right-length "100"
+
+# Left Status
+tm_host="$tm_fblack_byellow ♣︎ #H $tm_fyellow_bblack"
+tm_session="$tm_fgrey_bblack s:#S"
+set -g status-left "$tm_host$tm_session"
+
+# Right Status
+tm_right_sep="$tm_fgrey_bblack"
+tm_time="$tm_fblack_bgrey %R"
+tm_date="%Y-%m-%d "
+set -g status-right "$tm_right_sep$tm_time  $tm_date"
+
+# Windows
 setw -g window-status-separator ""
-setw -g window-status-bg "colour240"
-set -g status-left "#[fg=colour240,bg=colour3,bold] #H #[fg=colour3,bg=colour240,nobold,nounderscore,noitalics]#[fg=colour252,bg=colour240] #S #[fg=colour240,bg=colour240,nobold,nounderscore,noitalics]"
-set -g status-right "#[fg=colour252,bg=colour240,nobold,nounderscore,noitalics]#[fg=colour241,bg=colour252] %R  %Y-%m-%d "
-setw -g window-status-format "#[fg=colour252,bg=colour240] #I:#W "
-setw -g window-status-current-format "#[fg=colour240,bg=colour252] #I:#W "
+setw -g window-status-fg $tm_grey
+setw -g window-status-bg $tm_black
+setw -g window-status-activity-fg $tm_grey
+setw -g window-status-activity-bg $tm_black
+
+tm_window=" #I:#W "
+setw -g window-status-format "$tm_fgrey_bblack$tm_window"
+setw -g window-status-current-format "$tm_fyellow_bblack#[underscore]$tm_window"
