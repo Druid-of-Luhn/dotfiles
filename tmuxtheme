@@ -6,7 +6,7 @@
 tm_yellow="colour3"
 tm_black="colour0"
 tm_grey="colour252"
-tm_fyellow_bblack="#[fg=$yellow,bg=$tm_black]"
+tm_fyellow_bblack="#[fg=$tm_yellow,bg=$tm_black]"
 tm_fblack_byellow="#[fg=$tm_black,bg=$tm_yellow]"
 tm_fgrey_bblack="#[fg=$tm_grey,bg=$tm_black]"
 tm_fblack_bgrey="#[fg=$tm_black,bg=$tm_grey]"
@@ -54,5 +54,5 @@ setw -g window-status-activity-fg $tm_grey
 setw -g window-status-activity-bg $tm_black
 
 tm_window=" #I:#W "
-setw -g window-status-format "$tm_fgrey_bblack$tm_window"
-setw -g window-status-current-format "$tm_fyellow_bblack#[underscore]$tm_window"
+setw -g window-status-format "$tm_window"
+setw -g window-status-current-format "#[fg=yellow,underscore]$tm_window"
