@@ -6,10 +6,6 @@
 tm_black="colour0"
 tm_yellow="colour3"
 tm_grey="colour252"
-tm_fyellow_bblack="#[fg=$tm_yellow,bg=$tm_black]"
-tm_fblack_byellow="#[fg=$tm_black,bg=$tm_yellow]"
-tm_fgrey_bblack="#[fg=$tm_grey,bg=$tm_black]"
-tm_fblack_bgrey="#[fg=$tm_black,bg=$tm_grey]"
 
 # Pane border colours
 set -g pane-active-border-fg $tm_black
@@ -36,15 +32,12 @@ set -g status-left-length "100"
 set -g status-right-length "100"
 
 # Left Status
-tm_host="$tm_fblack_byellow ♣︎ #H $tm_fyellow_bblack"
-tm_session="$tm_fgrey_bblack s:#S"
-set -g status-left "$tm_host$tm_session"
+tm_host="#[fg=$tm_yellow] ♣︎ #H"
+tm_session="#[fg=$tm_grey] s:#S"
+set -g status-left "$tm_host $tm_session"
 
 # Right Status
-tm_right_sep="$tm_fgrey_bblack"
-tm_time="$tm_fblack_bgrey %R"
-tm_date="%Y-%m-%d "
-set -g status-right "$tm_right_sep$tm_time  $tm_date"
+set -g status-right "%R • %Y-%m-%d"
 
 # Windows
 setw -g window-status-separator ""
