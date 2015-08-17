@@ -18,10 +18,6 @@ export CLICOLOR=1
 # Colour grep output
 export GREP_OPTIONS="--color=auto"
 
-# UTF-8 Locale
-export LC_ALL=en_GB.UTF-8
-export LANG=en_GB.UTF-8
-
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 # Allow extended globbing
