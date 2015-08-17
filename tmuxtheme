@@ -5,7 +5,6 @@
 # Colours
 tm_black="colour0"
 tm_yellow="colour3"
-tm_dark="colour240"
 tm_grey="colour252"
 tm_fyellow_bblack="#[fg=$tm_yellow,bg=$tm_black]"
 tm_fblack_byellow="#[fg=$tm_black,bg=$tm_yellow]"
@@ -13,10 +12,10 @@ tm_fgrey_bblack="#[fg=$tm_grey,bg=$tm_black]"
 tm_fblack_bgrey="#[fg=$tm_black,bg=$tm_grey]"
 
 # Pane border colours
-set -g pane-active-border-fg $tm_yellow
-set -g pane-active-border-bg $tm_yellow
-set -g pane-border-fg $tm_dark
-set -g pane-border-bg $tm_dark
+set -g pane-active-border-fg $tm_black
+set -g pane-active-border-bg $tm_black
+set -g pane-border-fg $tm_black
+set -g pane-border-bg $tm_black
 # Pane number display
 set -g display-panes-active-colour $tm_yellow
 set -g display-panes-colour $tm_grey
