@@ -37,6 +37,8 @@ autocmd BufNewFile,BufRead Makefile setlocal tabstop=4 shiftwidth=4 softtabstop=
 autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+" Use Lisp mode for Lisp and Scheme files
+autocmd BufNewFile,BufRead *.scm,*.lisp setlocal lisp
 
 " Search
 set hlsearch			" Highlight search terms
@@ -119,7 +121,6 @@ Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
-Plug 'kien/rainbow_parentheses.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': 'java' }
@@ -151,6 +152,3 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
-
-" Rainbow Parentheses
-autocmd BufNewFile,BufRead *.scm,*.lisp RainbowParenthesesToggle
