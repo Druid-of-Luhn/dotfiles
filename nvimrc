@@ -124,6 +124,7 @@ Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': 'java' }
+Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 call plug#end()
 
 " Ctrl-P
@@ -152,3 +153,7 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
+
+" tslime
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
