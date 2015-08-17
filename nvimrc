@@ -103,9 +103,6 @@ set fileformats+=mac
 let g:netrw_liststyle=3
 nnoremap <leader>\ :Vex<CR>
 
-" Add include locations
-set path+=/usr/local/Cellar/sdl2/2.0.3/include
-
 " --------------------- "
 " ------ PLUGINS ------ "
 " --------------------- "
