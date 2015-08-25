@@ -117,6 +117,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
+Plug 'dag/vim2hs', { 'for': 'haskell' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
