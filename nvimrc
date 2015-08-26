@@ -152,10 +152,6 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
 
-" Change Haskell indentation defaults
-let g:haskell_indent_if=2
-let g:haskell_indent_case=4
-
 " tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
