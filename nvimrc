@@ -117,7 +117,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
-Plug 'dag/vim2hs', { 'for': 'haskell' }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
@@ -150,7 +149,12 @@ nnoremap <leader>l :SyntasticCheck<CR>
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_wq=0
+let g:syntastic_check_on_open=1
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
+
+" Change Haskell indentation defaults
+let g:haskell_indent_if=2
+let g:haskell_indent_case=4
 
 " tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
