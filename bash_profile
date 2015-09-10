@@ -16,7 +16,7 @@ export TERM=xterm-256color
 # Colour ls output
 export CLICOLOR=1
 # Colour grep output
-export GREP_OPTIONS="--color=auto"
+alias grep="grep --color=auto"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
