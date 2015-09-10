@@ -5,6 +5,9 @@ alias phps="php -S localhost:8888"
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
 
+# Colour ls output on different terminals
+alias ls="ls --color 2> /dev/null || ls -G 2> /dev/null"
+
 # Tmux attaches to existing session or creates a new one
 alias tm="tmux attach || tmux new"
 
