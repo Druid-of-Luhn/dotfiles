@@ -2,6 +2,7 @@ let mapleader=" "	    " Use spacebar as leader
 
 set hidden			    " Allow hiding unsaved buffers
 set history=100		    " Keep 100 lines of history
+set laststatus=1        " Only display status line with multiple files
 set ruler			    " Show the cursor position
 set number			    " Line numbers in gutter on left
 
