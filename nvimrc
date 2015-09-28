@@ -122,7 +122,6 @@ Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
-Plug 'kovisoft/slimv', { 'for': 'lisp' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': 'java' }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
