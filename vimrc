@@ -109,11 +109,7 @@ nnoremap <leader>\ :Vex<CR>
 " --------------------- "
 
 " Plug
-if has("nvim")
-    call plug#begin('~/.nvim/plugged')
-else
-    call plug#begin('~/.vim/plugged')
-endif
+call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
