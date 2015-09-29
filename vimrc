@@ -126,7 +126,7 @@ Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 call plug#end()
 
 " Ctrl-P
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/plugged/ctrlp.vim
 let g:ctrlp_map="<C-p>"
 let g:ctrlp_cmd="CtrlP"
 nnoremap <leader>t :CtrlPBufTag<CR>
@@ -144,6 +144,7 @@ else
 endif
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions=["buffertag", "line"]
+let g:ctrlp_match_func={"match": "matcher#cmatch" }
 
 " Syntastic
 nnoremap <leader>l :SyntasticCheck<CR>
