@@ -81,6 +81,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+" Remap splits with <leader-LeftUpRightDown>
+nnoremap <Leader><Left> 5<C-w><
+nnoremap <Leader><Up> 5<C-w>+
+nnoremap <Leader><Right> 5<C-w>>
+nnoremap <Leader><Down> 5<C-w>-
 " Only applied to neovim
 if has("nvim")
     " And same for terminal
