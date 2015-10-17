@@ -96,6 +96,11 @@ if has("nvim")
     " Use Esc to exit Terminal mode
     tnoremap <Esc> <C-\><C-n>
 endif
+" Variable renaming
+" Local remap
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+" Global remap
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 " Don't make backups
 set nobackup
