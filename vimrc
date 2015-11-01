@@ -86,16 +86,6 @@ nnoremap <Leader><Left> 5<C-w><
 nnoremap <Leader><Up> 5<C-w>+
 nnoremap <Leader><Right> 5<C-w>>
 nnoremap <Leader><Down> 5<C-w>-
-" Only applied to neovim
-if has("nvim")
-    " And same for terminal
-    tnoremap <C-j> <C-\><C-n><C-w>j
-    tnoremap <C-k> <C-\><C-n><C-w>k
-    tnoremap <C-h> <C-\><C-n><C-w>h
-    tnoremap <C-l> <C-\><C-n><C-w>l
-    " Use Esc to exit Terminal mode
-    tnoremap <Esc> <C-\><C-n>
-endif
 " Variable renaming
 " Local remap
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
