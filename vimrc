@@ -59,6 +59,17 @@ set wildignore=tags,*.swp,*.swo,*.bak,*.pyc,*.class
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" Writing mode
+func! WritingMode()
+    set complete+=s
+    setlocal wrap
+    setlocal linebreak
+    syntax enable
+    set background=light
+    colorscheme light
+endfu
+com! WM call WritingMode()
+
 " Mapping
 " Forgot to sudo vim
 cmap w!! w !sudo tee % >/dev/null
