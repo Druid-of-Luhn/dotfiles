@@ -97,11 +97,6 @@ nnoremap <Leader><Left> 5<C-w><
 nnoremap <Leader><Up> 5<C-w>+
 nnoremap <Leader><Right> 5<C-w>>
 nnoremap <Leader><Down> 5<C-w>-
-" Variable renaming
-" Local remap
-nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
-" Global remap
-nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 " Don't make backups
 set nobackup
@@ -124,7 +119,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -155,12 +149,11 @@ else
 endif
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions=["buffertag", "line"]
-let g:ctrlp_match_func={"match": "matcher#cmatch" }
 
 " Syntastic
 nnoremap <leader>l :SyntasticCheck<CR>
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
