@@ -31,7 +31,7 @@ export CLASSPATH="$CLASSPATH:$JLIBS_HOME/junit-4.11.jar:JDBC.jar"
 alias junit="java -cp .:$JLIBS_HOME/junit-4.11.jar:$JLIBS_HOME/hamcrest-core-1.3.jar org.junit.runner.JUnitCore"
 
 # IRC
-export IRCNICK="druid"
-export IRCUSER="druid"
+export IRCNICK="druidofluhn"
+export IRCUSER="druidofluhn"
 export IRCHOST="druidofluhn"
 export IRCNAME="Druid of Luhn"
