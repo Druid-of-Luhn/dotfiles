@@ -1,2 +1,4 @@
+.*.swp
+
 # Ignore vim's plugins
 vim/plugged
