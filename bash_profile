@@ -35,3 +35,6 @@ export IRCNICK="druidofluhn"
 export IRCUSER="druidofluhn"
 export IRCHOST="druidofluhn"
 export IRCNAME="Druid of Luhn"
+
+# Stop Homebrew from sending analytics data back
+HOMEBREW_NO_ANALYTICS=1
