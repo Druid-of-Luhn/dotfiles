@@ -39,7 +39,7 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " Use Lisp mode for Lisp and Scheme files
-autocmd BufNewFile,BufRead *.scm,*.lisp setlocal lisp
+autocmd BufNewFile,BufRead *.scm,*.sld,*.ss setlocal lisp filetype=scheme
 
 " Search
 set hlsearch			" Highlight search terms
