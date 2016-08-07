@@ -8,6 +8,10 @@ alias sudo="sudo "
 # Tmux attaches to existing session or creates a new one
 alias tm="tmux attach || tmux new"
 
+# Launch scheme with readline
+alias scm-run="chibi-scheme -m'scheme small' -rmain"
+alias scm-repl="rlwrap chibi-scheme -m'scheme small' -l"
+
 # Get week number
 alias week='date +%V'
 
