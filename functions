@@ -1,3 +1,26 @@
+scm() {
+    prefix="rlwrap"
+    arguments=""
+    case "$1" in
+        'r' | 'run' | 'exec')
+            shift;
+            prefix=""
+            arguments="-rmain $@";
+            ;;
+        'l' | 'load')
+            shift;
+            arguments="-l $@";
+            ;;
+        'repl' | 'loop')
+            ;;
+        *)
+            echo 'Usage: scm <run|repl|load> [filename]';
+            return;
+            ;;
+    esac
+    $prefix chibi-scheme -m'scheme small' $arguments
+}
+
 prompt_git() {
 	local s='';
 	local branchName='';
