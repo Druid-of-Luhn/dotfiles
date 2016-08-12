@@ -89,6 +89,8 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 " Search file system with \
 nnoremap \ :Ag<space>
+" Keep screen redraw shortcut
+nnoremap <Leader><C-l> :redraw<CR>
 " Move around splits with <c-hjkl>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
