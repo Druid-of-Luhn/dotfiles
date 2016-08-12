@@ -41,6 +41,9 @@ autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " Use Lisp mode for Lisp and Scheme files
 autocmd BufNewFile,BufRead *.scm,*.sld,*.ss setlocal lisp filetype=scheme
 
+" Keep syntax highlighting unbroken
+autocmd BufEnter,InsertLeave * :syntax sync fromstart
+
 " Search
 set hlsearch			" Highlight search terms
 set incsearch			" Highlight dynamically as pattern is typed
