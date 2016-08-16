@@ -1,3 +1,15 @@
+# Colour man pages
+man() {
+    env\
+        LESS_TERMCAP_md=$(printf $LIGHT_YELLOW) \
+        LESS_TERMCAP_me=$(printf $END) \
+        LESS_TERMCAP_so=$(printf $CYAN) \
+        LESS_TERMCAP_se=$(printf $END) \
+        LESS_TERMCAP_us=$(printf $CYAN) \
+        LESS_TERMCAP_ue=$(printf $END) \
+        man "$@"
+}
+
 scm() {
     prefix="rlwrap"
     arguments=""
