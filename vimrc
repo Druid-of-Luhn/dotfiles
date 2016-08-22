@@ -10,9 +10,8 @@ syntax enable		    " Syntax highlighting
 set background=dark     " Use dark background
 colorscheme dark        " Use 'dark' colourscheme
 
-filetype plugin indent on
 " Enable file type detection
-filetype on
+filetype plugin indent on
 " Spell check all files (applies only to comments in code)
 set spell spelllang=en_gb
 
@@ -40,6 +39,8 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " Use Lisp mode for Lisp and Scheme files
 autocmd BufNewFile,BufRead *.scm,*.sld,*.ss setlocal lisp filetype=scheme
+" Do not check spelling in Erlang files (it checks code)
+autocmd BufNewFile,BufRead *.erl,*.hrl setlocal nospell
 
 " Keep syntax highlighting unbroken
 autocmd BufEnter,InsertLeave * :syntax sync fromstart
