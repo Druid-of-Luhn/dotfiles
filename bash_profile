@@ -6,7 +6,7 @@ done
 
 # EXPORTS
 # Export coloured prompt
-export PS1="$CYAN\u$END@\h:$YELLOW\W$END\$(prompt_git \" ${RED}\")$END ⟫ "
+export PS1="\[$CYAN\]\u\[$END\]@\h:\[$YELLOW\]\W\[$END\]\$(prompt_git \" \[${RED}\]\")\[$END\] ⟫ "
 # Export path
 export PATH=~/.bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 # Set editor to vim
