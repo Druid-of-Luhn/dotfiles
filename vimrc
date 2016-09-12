@@ -140,6 +140,7 @@ Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': 'java' }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
+Plug 'sophacles/vim-processing', { 'for': 'processing' }
 call plug#end()
 
 " Ag
