@@ -13,6 +13,9 @@ export PATH=~/.bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR="vim"
 # Using coloured xterm terminal
 export TERM=xterm-256color
+# Use UTF-8
+export LANG=en_GB.UTF-8
+export LC_ALL=en_GB.UTF-8
 # Colour ls output
 export CLICOLOR=1
 # Colour grep output
