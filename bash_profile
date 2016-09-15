@@ -26,13 +26,6 @@ shopt -s cdspell;
 # Allow extended globbing
 shopt -s extglob
 
-# Java
-export CLASSPATH=".:bin:lib:src"
-export JLIBS_HOME="/usr/share/java"
-export CLASSPATH="$CLASSPATH:$JLIBS_HOME/junit-4.11.jar:JDBC.jar"
-# Allows us to run JUnit tests
-alias junit="java -cp .:$JLIBS_HOME/junit-4.11.jar:$JLIBS_HOME/hamcrest-core-1.3.jar org.junit.runner.JUnitCore"
-
 # IRC
 export IRCNICK="druidofluhn"
 export IRCUSER="druidofluhn"
