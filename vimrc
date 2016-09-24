@@ -57,7 +57,7 @@ set title			    " Set title of terminal window
 set noerrorbells		" Don't beep
 set wildmenu			" Make tab completion for files work like bash
 set ttyfast			    " Optimize for fast terminal connections
-set shellcmdflag=-ic    " Make the shell interactive to load .bash_profile
+set shellcmdflag=-lc    " Make the shell interactive to load .bash_profile
 
 " Vim ignores these files
 set wildignore=tags,*.swp,*.swo,*.bak,*.pyc,*.class
