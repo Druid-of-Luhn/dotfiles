@@ -119,6 +119,12 @@ set fileformats+=mac
 let g:netrw_liststyle=3
 nnoremap <leader>\ :Vex<CR>
 
+" Use ag for grepping
+if executable('ag')
+    set grepprg=ag\ --vimgrep
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
 " --------------------- "
 " ------ PLUGINS ------ "
 " --------------------- "
@@ -159,13 +165,14 @@ let g:ctrlp_custom_ignore={
 	\ "file": "\v*\.(DS_STORE|aux|class|log|out|pyc)$",
 	\ }
 if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
     let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 else
     let g:ctrlp_user_command=[".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
 endif
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions=["buffertag", "line"]
+let g:ctrlp_by_filename=1
+let g:ctrlp_use_caching=0
 
 " Syntastic
 nnoremap <leader>l :SyntasticCheck<CR>
