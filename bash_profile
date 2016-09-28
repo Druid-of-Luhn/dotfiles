@@ -5,9 +5,11 @@ for file in ~/Developer/dotfiles/colours ~/Developer/dotfiles/aliases ~/Develope
 done
 
 # Homebrew autocompletion
-completion_loc=$(brew --prefix)/etc/bash_completion
-if [ -f $completion_loc ]; then
-    . $completion_loc
+if [ $(hash brew 2>/dev/null) ]; then
+    completion_loc=$(brew --prefix)/etc/bash_completion
+    if [ -f $completion_loc ]; then
+        . $completion_loc
+    fi
 fi
 
 # EXPORTS
