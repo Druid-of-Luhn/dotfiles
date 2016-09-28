@@ -27,7 +27,6 @@ set -g status "on"
 set -g status-fg $tm_grey
 set -g status-bg $tm_black
 set -g status-justify "centre"
-set -g status-utf8 "on"
 set -g status-left-length "100"
 set -g status-right-length "100"
 
