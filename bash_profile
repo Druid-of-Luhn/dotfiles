@@ -4,6 +4,12 @@ for file in ~/Developer/dotfiles/colours ~/Developer/dotfiles/aliases ~/Develope
     fi
 done
 
+# Homebrew autocompletion
+completion_loc=$(brew --prefix)/etc/bash_completion
+if [ -f $completion_loc ]; then
+    . $completion_loc
+fi
+
 # EXPORTS
 # Export coloured prompt
 export PS1="\[$CYAN\]\u\[$END\]@\h:\[$YELLOW\]\W\[$END\]\$(prompt_git \" \[${RED}\]\")\[$END\] ⟫ "
