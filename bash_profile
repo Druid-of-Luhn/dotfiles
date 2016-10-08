@@ -29,6 +29,11 @@ export CLICOLOR=1
 # Colour grep output
 alias grep="grep --color=auto"
 
+# Activate virtualenv if present
+if [ -n "$VIRTUAL_ENV" ]; then
+    . "$VIRTUAL_ENV/bin/activate"
+fi
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 # Allow extended globbing
