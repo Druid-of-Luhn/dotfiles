@@ -181,7 +181,7 @@ let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
-let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/core.jar"
+let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar"
 
 " tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
