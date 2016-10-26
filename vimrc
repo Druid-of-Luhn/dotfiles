@@ -172,7 +172,6 @@ endif
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions=["buffertag", "line"]
 let g:ctrlp_by_filename=1
-let g:ctrlp_use_caching=0
 
 " Syntastic
 nnoremap <leader>l :SyntasticCheck<CR>
