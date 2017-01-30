@@ -134,6 +134,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug '~/Developer/dotfiles/vim-essence'
 Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-commentary'
