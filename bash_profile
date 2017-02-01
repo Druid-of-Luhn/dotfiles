@@ -19,8 +19,8 @@ export PS1="\[$CYAN\]\u\[$END\]@\h:\[$YELLOW\]\W\[$END\]\$(prompt_git \" \[${RED
 export PATH=$HOME/.cargo/bin:~/usr/bin:~/.bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 # Set editor to vim
 export EDITOR="vim"
-# Using coloured xterm terminal
-export TERM=xterm-256color
+# Using coloured screen terminal
+export TERM=screen-256color
 # Use UTF-8
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
