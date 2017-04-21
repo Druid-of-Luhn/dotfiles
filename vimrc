@@ -38,7 +38,7 @@ autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " Use Lisp mode for Lisp and Scheme files
-autocmd BufNewFile,BufRead *.scm,*.sld,*.ss setlocal lisp filetype=scheme
+autocmd BufNewFile,BufRead *.scm,*.sld,*.ss setlocal lisp filetype=scheme tabstop=2 shiftwidth=2 softtabstop=2
 " Do not check spelling in Erlang files (it checks code)
 autocmd BufNewFile,BufRead *.erl,*.hrl setlocal nospell
 
