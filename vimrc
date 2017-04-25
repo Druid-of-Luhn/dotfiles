@@ -146,7 +146,7 @@ Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'kongo2002/fsharp-vim', { 'for': 'fsharp' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': 'java' }
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': [ 'haskell', 'java' ] }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 call plug#end()
@@ -180,7 +180,6 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
-let g:syntastic_c_compiler_options="-fsyntax-only -Wall -Wextra"
 let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar:src/main:src/test"
 
 " tslime
