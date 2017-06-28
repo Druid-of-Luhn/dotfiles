@@ -141,6 +141,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 " On-demand loading
+Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
 Plug 'kongo2002/fsharp-vim', { 'for': 'fsharp' }
