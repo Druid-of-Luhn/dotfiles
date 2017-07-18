@@ -134,7 +134,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug '~/Developer/dotfiles/vim-essence'
+Plug 'Druid-of-Luhn/essence.vim'
 Plug 'keith/swift.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -174,6 +174,9 @@ endif
 let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions=["buffertag", "line"]
 let g:ctrlp_by_filename=1
+
+" Essence
+let g:essence_conceal=1
 
 " Syntastic
 nnoremap <leader>l :SyntasticCheck<CR>
