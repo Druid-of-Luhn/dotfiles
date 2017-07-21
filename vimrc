@@ -144,8 +144,6 @@ Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
-Plug 'edkolev/tmuxline.vim', { 'on': 'ThisWillNeverHappen' }
-Plug 'kongo2002/fsharp-vim', { 'for': 'fsharp' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': [ 'haskell', 'java' ] }
@@ -165,7 +163,7 @@ nnoremap <leader>f :CtrlPLine<CR>
 let g:ctrlp_working_path_mode="ra"
 let g:ctrlp_custom_ignore={
 	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
-	\ "file": "\v*\.(DS_STORE|aux|class|log|out|pyc)$",
+	\ "file": "\v*\.(DS_STORE|aux|bin|class|hi|log|o|out|pyc)$",
 	\ }
 if executable("ag")
     let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
@@ -186,6 +184,11 @@ let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar:src/main:src/test"
+
+" Tmux Navigator
+
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
 
 " tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
