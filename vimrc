@@ -146,7 +146,7 @@ Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'rking/ag.vim', { 'on': 'Ag' }
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': [ 'haskell', 'java' ] }
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': [ 'cpp', 'haskell', 'java' ] }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 call plug#end()
@@ -183,6 +183,8 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
+let g:syntastic_cpp_compiler='clang++'
+let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
 let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar:src/main:src/test"
 
 " Tmux Navigator
