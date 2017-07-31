@@ -47,3 +47,9 @@ export IRCNAME="Druid of Luhn"
 
 # Stop Homebrew from sending analytics data back
 HOMEBREW_NO_ANALYTICS=1
+
+# Includes, Libraries and pkg-config
+export C_INCLUDE_PATH=$HOME/usr/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$HOME/usr/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=$HOME/usr/lib:$HOME/usr/lib64:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$HOME/usr/lib/pkgconfig:$PKG_CONFIG_PATH
