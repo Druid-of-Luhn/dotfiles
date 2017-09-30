@@ -185,7 +185,7 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler='clang++'
 let g:syntastic_cpp_compiler_options=' -std=c++14 -stdlib=libc++'
-let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar:src/main:src/test"
+let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar:src/main:src/test:src/main/java:src/test/java"
 
 " Tmux Navigator
 
