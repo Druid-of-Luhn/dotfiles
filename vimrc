@@ -93,7 +93,7 @@ nnoremap <Leader><Leader> :noh<CR>
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 " Search file system with \
-nnoremap \ :Ag<space>
+nnoremap \ :Ack<space>
 " Keep screen redraw shortcut
 nnoremap <Leader><C-l> :redraw<CR>
 " Move around splits with <c-hjkl>
@@ -144,15 +144,17 @@ Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
+Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
 Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': [ 'cpp', 'haskell', 'java' ] }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 call plug#end()
 
-" Ag
-let g:ag_highlight=1 " highlight search term in results
+" Ack/Ag
+if executable('ag')
+    let g:ackprg='ag --vimgrep'
+endif
 
 " Ctrl-P
 set runtimepath^=~/.vim/plugged/ctrlp.vim
@@ -185,7 +187,8 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:syntastic_cpp_compiler='clang++'
 let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
-let g:syntastic_java_javac_classpath=".:src:bin:lib:lib/*.jar:src/main:src/test:src/main/java:src/test/java"
+let g:syntastic_java_maven_executable=''
+let g:syntastic_java_javac_classpath='.:src:bin:lib:lib/*.jar:src/main:src/test:src/main/java:src/test/java'
 
 " Tmux Navigator
 
