@@ -179,17 +179,6 @@ let g:ctrlp_by_filename=1
 " Essence
 let g:essence_conceal=1
 
-" Syntastic
-nnoremap <leader>l :SyntasticCheck<CR>
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=0
-let g:syntastic_check_on_wq=0
-let g:syntastic_check_on_open=1
-let g:syntastic_cpp_compiler='clang++'
-let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
-let g:syntastic_java_maven_executable=''
-let g:syntastic_java_javac_classpath='.:src:bin:lib:lib/*.jar:src/main:src/test:src/main/java:src/test/java'
-
 " Tmux Navigator
 
 " Disable tmux navigator when zooming the Vim pane
