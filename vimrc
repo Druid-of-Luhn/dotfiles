@@ -146,9 +146,9 @@ Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck', 'for': [ 'cpp', 'haskell', 'java' ] }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
+Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'cpp', 'haskell', 'java' ] }
 call plug#end()
 
 " Ack/Ag
