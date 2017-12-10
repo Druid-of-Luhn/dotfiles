@@ -4,7 +4,7 @@ set hidden			    " Allow hiding unsaved buffers
 set history=100		    " Keep 100 lines of history
 set laststatus=1        " Only display status line with multiple files
 set ruler			    " Show the cursor position
-set number			    " Line numbers in gutter on left
+set number			    " Show line numbers
 
 syntax enable		    " Syntax highlighting
 set background=dark     " Use dark background
@@ -49,7 +49,7 @@ autocmd BufEnter,InsertLeave * :syntax sync fromstart
 set hlsearch			" Highlight search terms
 set incsearch			" Highlight dynamically as pattern is typed
 set ignorecase          " Ignore searchcase
-set smartcase			" If search is lower case, ignore case
+set smartcase			" Do not ignore case when any uppercase character is used
 
 " Shell
 set shell=bash
@@ -64,29 +64,16 @@ set wildignore=tags,*.swp,*.swo,*.bak,*.pyc,*.class
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Writing mode
-func! WritingMode()
-    set complete+=s
-    setlocal wrap
-    setlocal linebreak
-    syntax enable
-    set background=light
-    colorscheme light
-endfu
-com! WM call WritingMode()
-
 " Mapping
 " Forgot to sudo vim
 cmap w!! w !sudo tee % >/dev/null
 " Stop q: window from popping up
 map q: :q
-" Allow navigating wrapped line
+" Allow navigating wrapped lines
 nnoremap j gj
 nnoremap k gk
 " Y yanks to end of line
 nnoremap Y y$
-" Map auto-completion to " "-tab
-imap <Leader><tab> <C-n>
 " Easy way to remove highlight from search
 nnoremap <Leader><Leader> :noh<CR>
 " Jump to end of pasted text
@@ -95,13 +82,13 @@ nnoremap <silent> p p`]
 " Search file system with \
 nnoremap \ :Ack<space>
 " Keep screen redraw shortcut
-nnoremap <Leader><C-l> :redraw<CR>
+nnoremap <Leader><C-l> :redraw!<CR>
 " Move around splits with <c-hjkl>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-" Remap splits with <leader-LeftUpRightDown>
+" Resize splits with <leader-LeftUpRightDown>
 nnoremap <Leader><Left> 5<C-w><
 nnoremap <Leader><Up> 5<C-w>+
 nnoremap <Leader><Right> 5<C-w>>
@@ -115,8 +102,11 @@ set nowritebackup
 set autoread
 " Understand mac file formats
 set fileformats+=mac
+" Hide file browser banner
+let g:netrw_banner=0
 " Open file browser in tree mode
 let g:netrw_liststyle=3
+" Open file browser with <space>-\
 nnoremap <leader>\ :Vex<CR>
 
 " Use ag for grepping
@@ -148,7 +138,7 @@ Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
-Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'cpp', 'haskell', 'java' ] }
+Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'haskell', 'java', 'python' ] }
 call plug#end()
 
 " Ack/Ag
@@ -182,7 +172,7 @@ let g:essence_conceal=1
 " Tmux Navigator
 
 " Disable tmux navigator when zooming the Vim pane
-let g:tmux_navigator_disable_when_zoomed = 1
+let g:tmux_navigator_disable_when_zoomed=1
 
 " tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
