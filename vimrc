@@ -51,11 +51,14 @@ set incsearch			" Highlight dynamically as pattern is typed
 set ignorecase          " Ignore searchcase
 set smartcase			" Do not ignore case when any uppercase character is used
 
+" Files
+set path+=**            " Use recursive search for finding files
+set wildmenu			" Make tab completion for files work like bash
+
 " Shell
 set shell=bash
 set title			    " Set title of terminal window
 set noerrorbells		" Don't beep
-set wildmenu			" Make tab completion for files work like bash
 set ttyfast			    " Optimize for fast terminal connections
 set shellcmdflag=-lc    " Make the shell interactive to load .bash_profile
 
