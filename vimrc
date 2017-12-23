@@ -141,7 +141,7 @@ Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
-Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'haskell', 'java', 'python' ] }
+Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'haskell', 'java', 'python', 'rust' ] }
 call plug#end()
 
 " Ack/Ag
