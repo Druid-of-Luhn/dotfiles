@@ -125,6 +125,7 @@ endif
 " Plug
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
+Plug 'cespare/vim-toml',
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Druid-of-Luhn/essence.vim'
