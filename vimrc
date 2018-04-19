@@ -129,6 +129,7 @@ Plug 'cespare/vim-toml',
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Druid-of-Luhn/essence.vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'keith/swift.vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'tpope/vim-commentary'
