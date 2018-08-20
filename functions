@@ -1,3 +1,8 @@
+# Write and read notes
+
+umedit() { mkdir -p "$HOME/Developer/notes"; $EDITOR "$HOME/Developer/notes/$1.md"; }
+um()     { less "$HOME/Developer/notes/$1.md"; }
+
 # Colour man pages
 man() {
     env\
