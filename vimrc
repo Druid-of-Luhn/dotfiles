@@ -125,7 +125,6 @@ endif
 " Plug
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'cespare/vim-toml',
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Druid-of-Luhn/essence.vim'
@@ -139,10 +138,9 @@ Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
+Plug 'jgdavey/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'sjl/tslime.vim', { 'for': ['lisp', 'scheme'] }
-Plug 'sophacles/vim-processing', { 'for': 'processing' }
 Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'haskell', 'java', 'python', 'rust' ] }
 call plug#end()
 
@@ -182,3 +180,5 @@ let g:tmux_navigator_disable_when_zoomed=1
 " tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
