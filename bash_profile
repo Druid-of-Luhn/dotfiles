@@ -27,6 +27,9 @@ export TERM=screen-256color
 # Use UTF-8
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
+# Use ctags backend for gtags
+export GTAGSCONF=~/.globalrc
+export GTAGSLABEL=ctags
 # Colour ls output
 export CLICOLOR=1
 
