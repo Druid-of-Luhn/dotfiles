@@ -169,6 +169,9 @@ let g:ctrlp_show_hidden=1
 let g:ctrlp_extensions=["buffertag", "line"]
 let g:ctrlp_by_filename=1
 
+" GNU Global
+map <Leader>] :GtagsCursor<CR>
+
 " Essence
 let g:essence_conceal=1
 
