@@ -29,8 +29,6 @@ export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 # Colour ls output
 export CLICOLOR=1
-# Colour grep output
-alias grep="grep --color=auto"
 
 # Activate virtualenv if present
 if [ -n "$VIRTUAL_ENV" ]; then
