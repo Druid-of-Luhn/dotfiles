@@ -132,7 +132,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'keith/swift.vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 " On-demand loading
@@ -141,6 +140,7 @@ Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
 Plug 'jgdavey/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gcommit', 'Gdiff'] }
 Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'haskell', 'java', 'python', 'rust' ] }
 call plug#end()
 
