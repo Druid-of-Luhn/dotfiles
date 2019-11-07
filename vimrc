@@ -137,7 +137,7 @@ Plug 'tpope/vim-surround'
 " On-demand loading
 Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
-Plug 'jgdavey/tslime.vim', { 'for': ['lisp', 'scheme'] }
+Plug 'Druid-of-Luhn/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gcommit', 'Gdiff'] }
@@ -181,7 +181,9 @@ let g:essence_conceal=1
 let g:tmux_navigator_disable_when_zoomed=1
 
 " tslime
-vmap <C-c><C-c> <Plug>SendSelectionToTmux
-nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+vmap <C-c><C-n> <Plug>SendSelectionToTmux
+nmap <C-c><C-n> <Plug>NormalModeSendToTmux
+vmap <C-c><C-c> <Plug>SendSelectionToTmuxNoNewline
+nmap <C-c><C-c> <Plug>NormalModeSendToTmuxNoNewline
 let g:tslime_always_current_session = 1
 let g:tslime_always_current_window = 1
