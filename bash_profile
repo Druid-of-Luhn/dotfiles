@@ -20,6 +20,7 @@ export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/usr/opt/gradle/gradle-4.2/bin:$PATH
 export PATH=$HOME/usr/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/curl/bin:$PATH
 # Set editor to vim
 export EDITOR="vim"
 # Using coloured screen terminal
@@ -32,6 +33,12 @@ export GTAGSCONF=~/.globalrc
 export GTAGSLABEL=ctags
 # Colour ls output
 export CLICOLOR=1
+# Sumo home directory
+export SUMO_HOME="/usr/local/opt/sumo/share/sumo"
+# Guile
+export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
 
 # Activate virtualenv if present
 if [ -n "$VIRTUAL_ENV" ]; then
