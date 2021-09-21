@@ -19,7 +19,7 @@ export PS1="\[$CYAN\]\u\[$END\]@\h:\[$YELLOW\]\W\[$END\]\$(prompt_git ' \\[${RED
 export PATH=$HOME/.cabal/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/usr/opt/gradle/gradle-4.2/bin:$PATH
-export PATH=$HOME/usr/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:$HOME/.bin:$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/curl/bin:$PATH
 # Set editor to vim
 export EDITOR="vim"
