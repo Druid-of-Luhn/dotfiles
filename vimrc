@@ -130,7 +130,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Druid-of-Luhn/essence.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'keith/swift.vim'
-Plug 'sersorrel/vim-lilypond'
+Plug 'sersorrel/vim-lilypond', { 'branch': 'main' }
 Plug 'tikhomirov/vim-glsl'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
