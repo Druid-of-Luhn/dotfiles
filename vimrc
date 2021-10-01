@@ -158,12 +158,13 @@ let g:ctrlp_cmd="CtrlP"
 nnoremap <leader>t :CtrlPBufTag<CR>
 nnoremap <leader>f :CtrlPLine<CR>
 let g:ctrlp_working_path_mode="ra"
+" This is actually ignored by the later use of ctrlp_user_command
 let g:ctrlp_custom_ignore={
-	\ "dir": "\v[\/]\.git|\.hg|\.sass_cache|bin|node_modules$",
-	\ "file": "\v*\.(DS_STORE|aux|bin|class|hi|log|o|out|pyc)$",
+	\ 'dir': '\.git|\.hg|\.sass_cache|\.stack-work|bin|node_modules$',
+	\ 'file': '\v*\.(DS_STORE|aux|bin|class|hi|log|o|out|pyc)$',
 	\ }
-if executable("ag")
-    let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
+if executable('rg')
+    let g:ctrlp_user_command='rg --files --ignore-file ~/.ctrlp-ignore %s'
 else
     let g:ctrlp_user_command=[".git/", "git --git-dir=%s/.git ls-files -oc --exclude-standard"]
 endif

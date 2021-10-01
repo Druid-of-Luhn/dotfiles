@@ -1,0 +1,12 @@
+.git
+.hg
+.sass_cache
+.stack-work
+bin
+dist-newstyle
+node_modules
+
+*.m4a
+*.midi
+*.mp3
+*.mp4
