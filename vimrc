@@ -136,6 +136,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
 " On-demand loading
 Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
 Plug 'bruno-/vim-man', { 'on': ['Man', 'Vman', 'Mangrep'] }
