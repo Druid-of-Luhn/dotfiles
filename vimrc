@@ -112,12 +112,6 @@ let g:netrw_liststyle=3
 " Open file browser with <space>-\
 nnoremap <leader>\ :Vex<CR>
 
-" Use ag for grepping
-if executable('ag')
-    set grepprg=ag\ --vimgrep
-    set grepformat=%f:%l:%c:%m,%f:%l:%m
-endif
-
 " --------------------- "
 " ------ PLUGINS ------ "
 " --------------------- "
@@ -150,6 +144,7 @@ call plug#end()
 " Ack/Ag
 if executable('ag')
     let g:ackprg='ag --vimgrep'
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
 elseif executable('rg')
     let g:ackprg='rg --vimgrep'
 endif
