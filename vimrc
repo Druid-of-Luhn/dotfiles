@@ -193,3 +193,11 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmuxNoNewline
 nmap <C-c><C-c> <Plug>NormalModeSendToTmuxNoNewline
 let g:tslime_always_current_session = 1
 let g:tslime_always_current_window = 1
+
+" vimwiki
+let wiki = {}
+let wiki.path = '$HOME/Documents/vimwiki'
+let wiki.path_html = '$HOME/Documents/vimwiki/html'
+let g:vimwiki_list = [wiki]
+" Disable automatically treating all .md files as wikis
+let g:vimwiki_global_ext = 0
