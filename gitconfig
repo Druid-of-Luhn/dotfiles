@@ -28,3 +28,5 @@
 	required = true
 [url "https://"]
 	insteadOf = git://
+[init]
+	defaultBranch = master

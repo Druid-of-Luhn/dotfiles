@@ -149,6 +149,8 @@ call plug#end()
 " Ack/Ag
 if executable('ag')
     let g:ackprg='ag --vimgrep'
+elseif executable('rg')
+    let g:ackprg='rg --vimgrep'
 endif
 
 " Ctrl-P
