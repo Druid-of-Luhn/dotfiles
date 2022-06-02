@@ -34,7 +34,7 @@ autocmd BufNewFile,BufRead *.c,*.cpp,*.h,*.hpp setlocal cindent
 " Set indentation to tabs for Makefiles
 autocmd BufNewFile,BufRead Makefile setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 " Treat .json files as .js
-autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+autocmd BufNewFile,BufRead *.json setfiletype json
 " Treat .md files as Markdown
 autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " Use Lisp mode for Lisp and Scheme files
@@ -130,6 +130,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'reasonml-editor/vim-reason-plus'
 Plug 'vimwiki/vimwiki'
 " On-demand loading
 Plug 'bhurlow/vim-parinfer', { 'for': ['lisp', 'scheme'] }
