@@ -139,7 +139,7 @@ Plug 'Druid-of-Luhn/tslime.vim', { 'for': ['lisp', 'scheme'] }
 Plug 'mileszs/ack.vim', { 'on': 'Ack' }
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gcommit', 'Gdiff'] }
-Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'haskell', 'java', 'python', 'rust' ] }
+Plug 'w0rp/ale', { 'on': 'ALELint', 'for': [ 'c', 'cpp', 'cs', 'haskell', 'java', 'python', 'rust' ] }
 call plug#end()
 
 " Ack/Ag
@@ -149,6 +149,9 @@ if executable('ag')
 elseif executable('rg')
     let g:ackprg='rg --vimgrep'
 endif
+
+" ALE
+let g:ale_virtualtext_cursor = 'disabled'
 
 " Ctrl-P
 set runtimepath^=~/.vim/plugged/ctrlp.vim
