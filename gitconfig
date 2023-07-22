@@ -5,8 +5,6 @@
 	default = simple
 [color]
     ui = auto
-[credential]
-	helper = osxkeychain
 [color "branch"]
 	current = yellow reverse
 	local = yellow
